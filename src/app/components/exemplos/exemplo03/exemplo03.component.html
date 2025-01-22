@@ -1,1 +1,21 @@
-<p>exemplo03 works!</p>
+<h2>Exemplo 03 - Diretiva ngFor e pipes</h2>
+
+<div class="alert alert-primary">
+    <div class="mb-3">
+        <input #filtro type="text" class="form-control" placeholder="Informe partes do texto"(keyup)="filtrar(filtro.value)">
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of pessoas">
+                <td>{{p.nome | uppercase | tamanho}}</td>
+                <td>{{p.idade}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
