@@ -2,7 +2,7 @@
 
 <div class="alert alert-primary">
     <div class="mb-3">
-        <input #filtro type="text" class="form-control" placeholder="Informe partes do texto"(keyup)="filtrar(filtro.value)">
+        <input #filtro type="text" class="form-control" placeholder="Informe partes do texto"(keyup)="0">
     </div>
     <table class="table table-striped">
         <thead>
@@ -12,7 +12,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let p of pessoas">
+            <tr *ngFor="let p of pessoas | filtro:filtro.value">
                 <td>{{p.nome | uppercase | tamanho}}</td>
                 <td>{{p.idade}}</td>
             </tr>

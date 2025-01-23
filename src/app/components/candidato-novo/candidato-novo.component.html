@@ -1,0 +1,30 @@
+<div class="margem">
+    <h2 class="text-primary text-center">Novo Candidato</h2>
+
+    <form>
+        <div class="mb-3">
+            <label for="" class="form-label">CPF:</label>
+            <input type="text" class="form-control" name="cpf" [(ngModel)]="candidato.cpf"> 
+            <!-- Com o ngModel, voce escreve e salva na variavel -->
+            <span>{{candidato.cpf}}</span> 
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Nome:</label>
+            <input type="text" class="form-control" name="nome" [(ngModel)]="candidato.nome">
+            <span>{{candidato.nome}}</span>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Telefone:</label>
+            <input type="text" class="form-control" name="telefone" [(ngModel)]="candidato.telefone">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Email:</label>
+            <input type="text" class="form-control" name="email" [(ngModel)]="candidato.email">
+        </div>
+        <div>
+            <button class="btn btn-primary" (click)="incluir(candidato)">Incluir</button> |
+            <button class="btn btn-secondary" (click)="fechar()">Fechar</button>
+        </div>
+
+    </form>
+</div>
